@@ -17,12 +17,23 @@ void get_variables (void)
     scanf  ("%i", &c);
 }
 
-int absolute(int x)
+int absolute (int x)
 {
     if ( x < 0 )
 	x = -x;
 
     return (x);
+}
+
+int squareRoot (int x)
+{
+    const float epsilon = 0.00001;
+    float	guess	= 1.0;
+
+    while ( absoluteValue ( guess * guess - x ) >= epsilon )
+	guess = ( x / guess + guess ) / 2.0;
+
+    return guess;
 }
 
 int main (void)
