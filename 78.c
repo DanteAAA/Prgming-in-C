@@ -8,7 +8,7 @@ float absoluteValue (float x)
     if ( x < 0 )
         x = -x;
 
-    return (x);-
+    return (x);
 }
 
 // f() to compute the square root of a number
