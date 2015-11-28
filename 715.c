@@ -1,6 +1,6 @@
 // Program to convert a positive integer to another base
 
-#include <stidio.h>
+#include <stdio.h>
 
 int	    convertedNumber[64];
 long int    numberToConvert;
@@ -21,7 +21,7 @@ void getNumberAndBase (void)
     }
 }
 
-void convertedNumber (void)
+void convertNumber (void)
 {
     do {
         convertedNumber[digit] = numberToConvert % base;
@@ -35,14 +35,14 @@ void convertedNumber (void)
 void displayConvertedNumber (void)
 {
     const char baseDigits[16] =
-        { '0', '1', '2', '3', '4', '5', '6', '7'
+        { '0', '1', '2', '3', '4', '5', '6', '7',
           '8', '9', 'A', 'B', 'C', 'D', 'E', 'F' };
     int nextDigit;
 
     printf ("Converted number = ");
 
     for (--digit; digit >= 0; --digit ) {
-        nextDigit = convertedNumber[digit]
+        nextDigit = convertedNumber[digit];
         printf ("%c", baseDigits[nextDigit]);
     }
 }
@@ -53,7 +53,7 @@ int main (void)
         displayConvertedNumber (void);
 
     getNumberAndBase();
-    convertedNumber ();
+    convertNumber ();
     displayConvertedNumber();
 
     return 0;
