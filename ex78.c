@@ -36,10 +36,21 @@ float squareRoot (int x)
     return guess;
 }
 
+int quad_fml(void)
+{
+    int bb;
+
+    bb = b * b;
+    sqrt = bb * -4 * a * c;
+    squareRoot(sqrt);
+
+    return result;
+}
+
 int main (void)
 {
     get_variables();
-    printf ("The quadratic solutions are:\nx = %i, x = %i.\n", a, b);
+    printf ("The quadratic solutions are:\nx = %i, x = %i.\n", a, quad_fml());
 
     return 0;
 }
