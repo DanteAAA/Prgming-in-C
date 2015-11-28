@@ -38,7 +38,7 @@ float squareRoot (int x)
 
 int quad_fml(void)
 {
-    int bb;
+    int bb sqrt;
 
     bb = b * b;
     sqrt = bb * -4 * a * c;
