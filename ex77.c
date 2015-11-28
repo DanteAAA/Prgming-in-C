@@ -20,7 +20,7 @@ int get_variables (void)
 	return (x, n);
 }
 
-long unsigned x_to_the_n (int x, int n)
+long unsigned x_to_the_n (void)
 {
 	for ( i = 0; i < n; ++i )
 	    x *= x;
