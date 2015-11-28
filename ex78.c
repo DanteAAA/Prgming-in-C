@@ -17,6 +17,14 @@ void get_variables (void)
     scanf  ("%i", &c);
 }
 
+int absolute(int x)
+{
+    if ( x < 0 )
+	x = -x;
+
+    return (x);
+}
+
 int main (void)
 {
     get_variables();
