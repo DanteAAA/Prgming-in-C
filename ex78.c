@@ -17,7 +17,7 @@ void get_variables (void)
     scanf  ("%i", &c);
 }
 
-int absolute (int x)
+int absoluteValue (int x)
 {
     if ( x < 0 )
 	x = -x;
@@ -25,7 +25,7 @@ int absolute (int x)
     return (x);
 }
 
-int squareRoot (int x)
+float squareRoot (int x)
 {
     const float epsilon = 0.00001;
     float	guess	= 1.0;
