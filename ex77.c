@@ -1,44 +1,42 @@
-// This program calculates x to the nth power
+/* Write a function that raises an integer to a postive integer power.
+ * 	Call the function x_to_the_n taking two integer arguments x and n.
+ * 	Have the function return a long int, which represents the results
+ * 	of calculating x.						*/
 
 #include <stdio.h>
 
-// Global Variables since I don't know how to only allow them
-// in functions, and not globally
-
-	int i;
-	int x;
-	int n;
-
-int get_variables (void)
-{
-	printf ("What is your x: ");
-	scanf  ("%i", &x);
-
-	printf ("What is your n: ");
-	scanf  ("%i", &n);
-
-	return (x, n);
-}
-
-long unsigned x_to_the_n (void)
-{
-	for ( i = 0; i < n; ++i )
-	    x *= x;
-
-	return x;
-}
-
-void print_output (void)
-{
-	printf ("%i to the %i power is: %lu", x, n, x_to_the_n());
-}
-
 int main (void)
 {
-	get_variables();
-	x_to_the_n(x, n);
+	long x;
+	int  i;
 
-	print_output();
+	printf ("This program will calculate x to the nth power.\n");
+	printf ("Choose an x > 0: ");
+	scanf  ("%li", &x);
 
-	return 0;
+	for ( i = 0; i < 3; ++i ) {
+	    if ( x <= 0 ) {
+		printf ("BITCH I SAID LESS THAN 0.\n");
+		printf ("Try again bitch ass motherfucking: ");
+		scanf  ("%li", &x);
+	    }
+	    else {
+		break;
+	    }
+	}	
+
+	if ( x <= 0 ) {
+	    printf ("You are a fucking bitch.\n");
+	    return 1;
+	}
+
+	// Test
+	printf ("x: %li\n", x);
+//	x_to_the_n();
 }
+
+//unsigned long x_to_the_n (unsigned int x, unsigned int n)
+//{
+//	return 
+
+//}

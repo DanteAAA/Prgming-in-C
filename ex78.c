@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 // Global Variables
-int a, b, c, x1, x2;
+    int a, b, c;
+    float x1, x2;
 
 void get_variables (void)
 {
@@ -37,15 +38,21 @@ float squareRoot (int x)
 
 void quad_fml(int a, int b, int c)
 {
-    int bb, sqrt, top, t1, t2;
+    int bb, sqrt;
+    float top, t1, t2;
 
     bb = b * b;
-    sqrt = bb * -4 * a * c;
+    printf ("\nbb: %i\n", bb);			// C
+    printf ("\na: %i\nc: %i", a, c);
+    sqrt = bb -4 * a * c;
+    printf ("\nsqrt: %i\n", sqrt);		// C
     top = squareRoot(sqrt);
-    t1 = -b + top;
-    t2 = -b - top;
-    x1 = t1 / 2a;
-    x2 = t2 / 2a;
+    printf ("\ntop: %f\nb: %i\n", top, b);	// C
+    t1 = ( -1 * b ) + top;
+    t2 = ( -1 * b ) - top;
+    printf ("\nt1: %i\nt2: %i\n\n", t1, t2);	// IC
+    x1 = t1 / ( 2 * a) ;
+    x2 = t2 / ( 2 * a) ;
 }
 
 int main (void)
