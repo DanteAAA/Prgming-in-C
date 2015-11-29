@@ -59,7 +59,7 @@ int main (void)
 {
     get_variables();
     quad_fml(a, b, c);
-    printf ("The quadratic solutions are:\nx = %i, x = %i.\n", x1, x2);
+    printf ("The quadratic solutions are:\nx = %f, x = %f.\n", x1, x2);
 
     return 0;
 }
