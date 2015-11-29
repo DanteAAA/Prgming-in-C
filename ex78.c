@@ -47,10 +47,10 @@ void quad_fml(int a, int b, int c)
     sqrt = bb -4 * a * c;
     printf ("\nsqrt: %i\n", sqrt);		// C
     top = squareRoot(sqrt);
-    printf ("\ntop: %f\nb: %i\n", top, b);	// C
+    printf ("\ntop: %f\nb: %f\n", top, b);	// C
     t1 = ( -1 * b ) + top;
     t2 = ( -1 * b ) - top;
-    printf ("\nt1: %i\nt2: %i\n\n", t1, t2);	// IC
+    printf ("\nt1: %f\nt2: %f\n\n", t1, t2);	// IC
     x1 = t1 / ( 2 * a) ;
     x2 = t2 / ( 2 * a) ;
 }
