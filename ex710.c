@@ -2,11 +2,13 @@
    is a prime number and returns 0 others.                  */
 
 #include <stdio.h>
+#include <stdbool.h>
 
 prime(int x)
 {
     int p, i, primes[100], primeIndex = 2;
-    bool isPrime, xPrime;
+    bool isPrime;
+    bool xPrime;
 
     primes[0] = 2;
     primes[1] = 3;
@@ -25,13 +27,14 @@ prime(int x)
     }
 
     for ( i = 0; i < 100; ++i ) {
-        if ( primes[i] = x )
+        if ( primes[i] = x ) {
             xPrime = true;
             return true;
-
-        else
+        }
+        else {
             xPrime = false;
             return false;
+        }
     }            
 }
 
@@ -42,7 +45,7 @@ int main (void)
     printf ("This program determines if a number is prime number or not.\nWhat number would you like to check?: ");
     scanf  ("%i", &test);
 
-    if ( prime(test) == 1 )
+    if ( prime(test) == true )
         printf ("This number is prime AF!\n");
     else
         printf ("This number is not prime.\n");
