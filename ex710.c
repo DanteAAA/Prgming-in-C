@@ -35,16 +35,14 @@ prime(int x)
     }            
 }
 
-
 int main (void)
 {
     int test;
 
-    printf ("This program determines if a number is prime number or not.\n
-             What number would you like to check?: ");
+    printf ("This program determines if a number is prime number or not.\nWhat number would you like to check?: ");
     scanf  ("%i", &test);
 
-    if ( prime(test) = true )
+    if ( prime(test) == 1 )
         printf ("This number is prime AF!\n");
     else
         printf ("This number is not prime.\n");
