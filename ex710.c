@@ -4,16 +4,16 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-prime(int x)
+bool prime(int x)
 {
-    int p, i, primes[100], primeIndex = 2;
+    int p, i, primes[50], primeIndex = 2;
     bool isPrime;
     bool xPrime;
 
     primes[0] = 2;
     primes[1] = 3;
 
-    for ( p = 5; p <= 100; p = p + 2 ) {
+    for ( p = 5; p <= 1000; p = p + 2 ) {
         isPrime = true;
 
         for ( i = 1; isPrime && p / primes[i] >= primes[i]; ++i )
@@ -26,16 +26,21 @@ prime(int x)
         }
     }
 
-    for ( i = 0; i < 100; ++i ) {
-        if ( primes[i] = x ) {
+//    printf ("\n\nTHIS IS X: %i\n\n", x);    //CHECK
+
+    for ( i = 0; i < 50; ++i ) {
+//        printf ("primes[%i]: %i\n", i, primes[i]);      // CHECK
+
+        if ( primes[i] == x ) {
             xPrime = true;
-            return true;
+	    break;
         }
         else {
             xPrime = false;
-            return false;
         }
-    }            
+    }
+
+    return xPrime;
 }
 
 int main (void)
@@ -44,6 +49,8 @@ int main (void)
 
     printf ("This program determines if a number is prime number or not.\nWhat number would you like to check?: ");
     scanf  ("%i", &test);
+
+    printf ("Is %i prime?: %i\n", test, prime(test));
 
     if ( prime(test) == true )
         printf ("This number is prime AF!\n");
