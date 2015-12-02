@@ -22,7 +22,7 @@ int main (void)
     int array[4];
 
     for ( n = 0; n >= numOfElements; ++n ) {
-        array[i] = 5;
+        array[n] = 5;
     }
 
     printf("The total of the array is: %i\n", arraySum(array[4], numOfElements));
