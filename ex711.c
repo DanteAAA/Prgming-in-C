@@ -3,7 +3,7 @@
  * in the array. Have the function return as its result
  * the sum of the elemnts in the array.                     */
 
-#inlcude <stdio.h>
+#include <stdio.h>
 
 arraySum(int rayman[], int x)
 {
