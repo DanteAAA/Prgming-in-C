@@ -10,8 +10,8 @@
 
 int main (void)
 {
-    void transposeMatrix ( int aa[4][5], int bb[5][4] );
-    void displayMatrix (int matrix[5][5]);
+    void transposeMatrix (int anRows, int anCols, int aa[anRows][anCols], int bnRows, int bnCols, int bb[bnRows][bnCols]);
+    void displayMatrix ( int nRows, int nCols, int matrix[nRows][nCols]);
     
     int sampleMatrix1[4][5] =
         {
@@ -30,30 +30,35 @@ int main (void)
             { 117, 118, 119, 120 }
         };
 
-    printf ("Here are our sample Matrices:\n");
-    displayMatrix ( sampleMatrix1 );
+    printf ("Here are our sample Matrices:\nMatrix1:\n");
+    displayMatrix ( 4, 5, sampleMatrix1 );
+    printf ("\nMatrix2:\n");
+    displayMatrix ( 5, 4, sampleMatrix2 );
+
+    transposeMatrix ( 4, 5, sampleMatrix1, 5, 4, sampleMatrix2 );
 }
 
-void transposeMatrix(int aa[4][5], int bb[5][4]) // aa = [4][5]; bb = [5][4]
+void transposeMatrix(int anRows, int anCols, int aa[anRows][anCols], int bnRows, int bnCols, int bb[bnRows][bnCols]) // aa = [4][5]; bb = [5][4]
 {
     int row, column, temp[5][5], x = 5, y = 5;
 
     for ( row = 0; row < 5; ++row ) {
         for ( column = 0; column < 5; ++column ) {
-            temp[x][y] = aa[4][5];
-            aa[4][5] = bb[5][4];
-            bb[5][4] = temp[x][y];
+            temp[x][y] = aa[anRows][anCols];
+            aa[anRows][anCols] = bb[bnRows][bnCols];
+            bb[bnCols][bnCols] = temp[x][y];
         }
     }
 }
 
-void displayMatrix(int matrix[5][5])
+void displayMatrix(int nRows, int nCols, int matrix[nRows][nCols])
 {
     int row, column;
 
-    for ( row = 0; row < 5; ++row ) {
-        for ( column = 0; column < 5; ++column ) {
+    for ( row = 0; row < nRows; ++row ) {
+        for ( column = 0; column < nCols; ++column ) {
             printf ("%5i", matrix[row][column]);
         }
+    printf ("\n");
     }
 }
