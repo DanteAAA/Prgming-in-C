@@ -40,9 +40,9 @@ void transposeMatrix(int aa[4][5], int bb[5][4]) // aa = [4][5]; bb = [5][4]
 
     for ( row = 0; row < 5; ++row ) {
         for ( column = 0; column < 5; ++column ) {
-            temp[x][y] = aa[a][b];
-            aa[a][b] = bb[c][d];
-            bb[c][d] = temp[x][y];
+            temp[x][y] = aa[4][5];
+            aa[4][5] = bb[5][4];
+            bb[5][4] = temp[x][y];
         }
     }
 }
