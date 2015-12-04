@@ -47,7 +47,7 @@ void transposeMatrix(int aa[4][5], int bb[5][4]) // aa = [4][5]; bb = [5][4]
     }
 }
 
-void displayMatrxi(int matrix[5][5])
+void displayMatrix(int matrix[5][5])
 {
     int row, column;
 
