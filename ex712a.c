@@ -31,7 +31,7 @@ int main (void)
         };
 
     printf ("Here are our sample Matrices:\n");
-    printf ("%5i\n", displayMatrix ( sampleMatrix1 );
+    printf ("%5i\n", displayMatrix ( sampleMatrix1 ));
 }
 
 void transposeMatrix(int aa[4][5], int bb[5][4]) // aa = [4][5]; bb = [5][4]
