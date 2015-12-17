@@ -5,6 +5,7 @@ main()
 {
 	int c;
 
-	while (((c = getchar()) != EOF)) == 1
-	    putchar(c);	    
+	while ((c = getchar()) != EOF)
+	    printf ("c = getchar() != EOF equals 1\n");
+	    putchar(c);
 }
